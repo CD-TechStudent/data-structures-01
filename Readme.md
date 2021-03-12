@@ -179,17 +179,14 @@ Using the head pointer, we will be able to traverse the whole list, even perform
 For this, we create a LinkedList class with a single head pointer:
 
 ```
-# A single node of a singly linked list
-class Node:
-  # constructor
-  def __init__(self, data = None, next=None): 
-    self.data = data
-    self.next = next
-
 # A Linked List class with a single head node
 class LinkedList:
   def __init__(self):  
     self.head = None
+
+# Remove this and replace with below
+first = Node(3)
+print(first.data)
 
 # Linked List with a single node
 LL = LinkedList()
@@ -204,17 +201,7 @@ Last but not least, we can add various linked list manipulation methods in our i
 Let’s have a look at the insertion and print methods for our LinkedList implementation below:
 
 ```
-class Node:
-  # constructor
-  def __init__(self, data = None, next=None): 
-    self.data = data
-    self.next = next
-
-# A Linked List class with a single head node
-class LinkedList:
-  def __init__(self):  
-    self.head = None
-  
+# insertion method for the linked list class
   # insertion method for the linked list
   def insert(self, data):
     newNode = Node(data)
@@ -232,6 +219,11 @@ class LinkedList:
     while(current):
       print(current.data)
       current = current.next
+
+# Remove this and replace with below 
+LL = LinkedList()
+LL.head = Node(3)
+print(LL.head.data)
 
 # Singly Linked List with insertion and print methods
 LL = LinkedList()
